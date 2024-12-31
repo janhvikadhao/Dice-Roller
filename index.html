@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            width: 400px;
+            height: 450px;
+            border: 4px solid black;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+            background-color:  #ffcccc ;
+            margin: 60px auto;
+            
+        }
+        .img-dice1{
+            width: 250px;
+            height: 250px;
+            display: block;
+            margin: 40px auto;
+            
+        }
+        .btn-roll{
+            display: block;
+            margin: 20px auto;
+            background-color:#ccccff;
+            color: #000;
+            padding: 60px auto;
+            border: #000099 solid;
+            border-radius: 20px;
+            height: 40px;
+            width: 140px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <div class="container">
+    <h1 style="text-align: center;">Dice Roller</h1>
+
+    <img src="./images/dice1.png" alt="" class="img-dice1" id="img-dice"/>
+
+    <button type="button" class="btn-roll" onclick="rollDice()">Roll the Dice</button>
+    </div>
+    <script>
+        function rollDice()
+        {
+        const min = 1;
+        const max = 6;
+
+        const randomNumber = Math.round(Math.random() * (max-min)) + min ;
+        
+        
+
+        const diceImg = document.getElementById('img-dice')
+
+        if(randomNumber==1)
+        {
+            diceImg.src='./images/one.png'
+        }
+        else if (randomNumber==2)
+        {
+             diceImg.src='./images/two.png'
+        }
+        else if (randomNumber==3)
+        {
+             diceImg.src='./images/three.png'
+        }
+        else if (randomNumber==4)
+        {
+             diceImg.src='./images/four.png'
+        }
+        else if (randomNumber==5)
+        {
+             diceImg.src='./images/five.png'
+        }
+        else if (randomNumber==6)
+        {
+             diceImg.src='./images/six.png'
+        }
+        }
+        
+    </script>
+</body>
+</html>
